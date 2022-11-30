@@ -49,7 +49,7 @@ const style_texts = ["The butterfly (colloquially shortened to fly) is a swimmin
 "Freestyle is a category of swimming competition, defined by the rules of the International Swimming Federation (FINA), in which competitors are subject to a few limited restrictions on their swimming stroke. Freestyle races are the most common of all swimming competitions, with distances beginning with 50 meters (50 yards) and reaching 1500 meters (1650 yards), also known as the mile. The term 'freestyle stroke' is sometimes used as a synonym for 'front crawl', as front crawl is the fastest surface swimming stroke. It is now the most common stroke used in freestyle competitions."
 ];
 
-const style_descriptions = Array(4).fill(null); // array, that will contain all of the styles descriptions (initialized empty)
+const style_descriptions = Array(4).fill(null); // array, that will contain all of the styles descriptions (initialized with null values)
 
 // "for" loop to create all of styles descriptions as objects, and add an event listener for that object
 for (let i = 0; i < styles.length; i++) {
@@ -63,7 +63,7 @@ for (let i = 0; i < styles.length; i++) {
 }
 
 
-function zoom_pool_pic() {
+function zoom_pool_pic() { 
     if (!pool_pic_zoomed_in) {
         pool_pic.style.width = "100%";
         pool_pic.style.cursor = "zoom-out";
