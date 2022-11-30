@@ -1,0 +1,78 @@
+<!--
+• The page has to be developed according to HTML 5 or XHTML1.0
+• Strict standard. DOCTYPE has to be declared and the document must conform to it.
+• The document must validate using the W3C validator (http://validator.w3.org).
+• ID and class attributes must be used appropriately throughout the document.
+• HTML elements must be used according to their semantics.
+• HTML document must contain all of these element types:
+– headings (different levels)
+– lists (ordered and unordered)
+– basic text formatting (paragraphs, line breaks, bold, italics)
+– images
+– data input form elements (later accessed from JavaScript code)
+• UTF-8 encoding is used.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWIMMING</title>
+    <link rel="stylesheet" href="swimming.css">
+    <link rel="shortcut icon" href="swimming_icon.png" type="image/x-icon">
+    <script src="swimming.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>THE ART OF SWIMMING</h1>
+    </header>
+    <div id="content">
+        <div id="main">
+            <div id="quote">
+                <blockquote>
+                    “The water is your friend... you don't have to fight with water, just share the same spirit as the water,
+                    and it will help you move.” <br> — <em>Alexander Popov</em>
+                </blockquote>
+                <img src="popov.jpeg" alt="Alexander Popov">
+            </div>
+            <section class="content-section" id="what-is-swimming">
+                <h2>What is swimming?</h2>
+                <p>
+                    <strong>Swimming</strong> is an individual or team racing sport that requires the use of one's entire body to move through water. The sport takes place in pools or open water (e.g., in a sea or lake). Competitive swimming is one of the most popular Olympic sports, with varied distance events in butterfly, backstroke, breaststroke, freestyle, and individual medley. In addition to these individual events, four swimmers can take part in either a freestyle or medley relay. A medley relay consists of four swimmers who will each swim a different stroke, ordered as backstroke, breaststroke, butterfly and freestyle.
+
+                    Swimming each stroke requires a set of specific techniques; in competition, there are distinct regulations concerning the acceptable form for each individual stroke. There are also regulations on what types of swimsuits, caps, jewelry and injury tape that are allowed at competitions. Although it is possible for competitive swimmers to incur several injuries from the sport, such as tendinitis in the shoulders or knees, there are also multiple health benefits associated with the sport.
+                </p>
+            </section>
+            <section class="content-section" id="swim-styles">
+                <h2>Swim styles</h2>
+                <p>
+                    In competitive swimming, four major styles have been established. These have been relatively stable over the last 30–40 years with minor improvements. They are: (<em>click on a style to learn more about it</em>)
+                </p>
+                <ul>
+                    <li id="butterfly"><a id="butterfly-link">Butterfly</a></li>
+                    <li id="backstroke"><a id="backstroke-link">Backstroke</a></li>
+                    <li id="breaststroke"><a id="breaststroke-link">Breaststroke</a></li>
+                    <li id="freestyle"><a id="freestyle-link">Freestyle</a></li>
+                </ul>
+            </section>
+            <section class="content-section" id="competition-pools">
+                <h2>Competition pools</h2>
+                <p>
+                    World Championship pools must be 50 metres (160 ft) (long course) long and 25 metres (82 ft) wide, with ten lanes labelled zero to nine (or one to ten in some pools; zero and nine (or one and ten) are usually left empty in semi-finals and finals); the lanes must be at least 2.5 metres (8.2 ft) wide. They will be equipped with starting blocks at both ends of the pool and most will have Automatic Officiating Equipment, including touch pads to record times and sensors to ensure the legality of relay takeovers. The pool must have a minimum depth of two metres.
+
+                    Other pools which host events under FINA regulations are required to meet some but not all of these requirements. Many of these pools have eight, or even six, instead of ten lanes and some will be 25 metres (82 ft) long, making them Short course. World records that are set in short course pools are kept separate from those set in long course pools because it may be an advantage or disadvantage to swimmers to have more or less turns in a race.
+                </p>
+                <img id="pool-pic" src="pool.png" alt="">
+            </section>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#what-is-swimming">What is swimming?</a></li>
+                <li><a href="#swim-styles">Swim styles</a></li>
+                <li><a href="#competition-pools">Competition pools</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
