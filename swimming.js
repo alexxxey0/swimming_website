@@ -78,6 +78,8 @@ const pool_pic = document.getElementById("pool-pic");
 let pool_pic_zoomed_in = false;
 pool_pic.addEventListener("click", zoom_pool_pic);
 
+alert("Text");
+
 
 
 
