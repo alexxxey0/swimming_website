@@ -67,9 +67,9 @@ a {
 #quote {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     margin-top: 5%;
+    flex-wrap: wrap;
 }
 
 #quote blockquote {
@@ -96,7 +96,6 @@ a {
 #navbar {
     width: 20%;
     text-align: left;
-    font-size: 22px;
     position: sticky;
     top: 0;
     align-self: flex-start;
@@ -115,6 +114,7 @@ a {
     border-radius: 10px;
     transition: all 0.5s ease;
     border: 1px solid #0047ab;
+    font-size: 1.5em;
 }
 
 #navbar a {
@@ -155,3 +155,42 @@ a {
     margin-right: auto;
 }
 
+
+@media (max-width: 600px) {
+    #content {
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    #navbar {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    #navbar ul li {
+        font-size: 22px;
+        width: 100%;
+    }
+
+    #navbar ul {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #main {
+        width: 90%;
+    }
+
+    #quote blockquote {
+        margin-left: 0;
+        margin-right: 0;
+        width: 90%;
+    }
+
+    #quote {
+        justify-self: stretch;
+        flex-wrap: wrap;
+    }
+}
