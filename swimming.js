@@ -79,6 +79,14 @@ let pool_pic_zoomed_in = false;
 pool_pic.addEventListener("click", zoom_pool_pic);
 
 
+// Add tilt effects to images with VanillaTilt
+VanillaTilt.init(document.querySelectorAll(".swimmer-image"), {
+    scale: 1.03,
+    perspective: 2000,
+    glare: true,
+    "max-glare": 0.5
+});
+
 
 
 

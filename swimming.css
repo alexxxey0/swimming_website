@@ -40,7 +40,7 @@ body {
     background-color: white;
 }
 
-#main h2 {
+h2, h3 {
     padding-left: 1%;
 }
 
@@ -55,11 +55,14 @@ header h1 {
 }
 
 .content-section p {
-    line-height: 1.5;
-    font-size: 18px;
     text-align: justify;
     padding-left: 1%;
     padding-right: 1%;
+}
+
+.content-section p, .swim-styles-list { /* Formatting two classes */
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 a {
@@ -139,11 +142,6 @@ a {
 
 /* Swim styles */
 
-#swim-styles ul {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
 #swim-styles a:hover {
     text-decoration: underline;
 }
@@ -171,8 +169,28 @@ a {
     padding-left: 40px;
 }
 
+/* Famous swimmers */
 
+.swimmer-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
+.swimmer-description img {
+    width: 100%;
+    height: 450px;
+}
+
+.swimmer-image {
+    width: 30%;
+}
+
+.swimmer-description p {
+    width: 60%;
+}
+
+/* Print version */
 
 @media print {
     nav, header, #pool-pic-caption {
@@ -189,5 +207,9 @@ a {
 
     #main {
         margin: 0;
+    }
+
+    #style-click-text {
+        display: none;
     }
 }

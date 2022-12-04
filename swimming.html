@@ -21,14 +21,13 @@
     <title>SWIMMING</title>
     <link rel="stylesheet" href="swimming.css">
     <link rel="shortcut icon" href="swimming_icon.png" type="image/x-icon">
-    <script src="swimming.js" defer></script>
 </head>
 <body>
     <header>
         <h1>THE ART OF SWIMMING</h1>
     </header>
     <div id="content"> <!--The whole content of the page (everything except the header)-->
-        <div id="main"> <!-- Main content of the page -->
+        <div id="main"> <!-- Main content of the page (not including navigation) -->
             <div id="quote">
                 <blockquote>
                     “The water is your friend... you don't have to fight with water, just share the same spirit as the water,
@@ -44,18 +43,20 @@
                     Swimming each stroke requires a set of specific techniques; in competition, there are distinct regulations concerning the acceptable form for each individual stroke. There are also regulations on what types of swimsuits, caps, jewelry and injury tape that are allowed at competitions. Although it is possible for competitive swimmers to incur several injuries from the sport, such as tendinitis in the shoulders or knees, there are also multiple health benefits associated with the sport.
                 </p>
             </section>
+            <hr>
             <section class="content-section" id="swim-styles">
                 <h2>Swim styles</h2>
                 <p>
-                    In competitive swimming, four major styles have been established. These have been relatively stable over the last 30–40 years with minor improvements. They are: (<em>click on a style to learn more about it</em>)
+                    In competitive swimming, four major styles have been established. These have been relatively stable over the last 30–40 years with minor improvements. They are: <span id="style-click-text">(<em>click on a style to learn more about it</em>)</span>
                 </p>
-                <ul>
+                <ul class="swim-styles-list">
                     <li id="butterfly"><a id="butterfly-link"><strong>Butterfly</strong></a></li>
                     <li id="backstroke"><a id="backstroke-link"><strong>Backstroke</strong></a></li>
                     <li id="breaststroke"><a id="breaststroke-link"><strong>Breaststroke</strong></a></li>
                     <li id="freestyle"><a id="freestyle-link"><strong>Freestyle</strong></a></li>
                 </ul>
             </section>
+            <hr>
             <section class="content-section" id="competition-pools">
                 <h2>Competition pools</h2>
                 <p>
@@ -66,6 +67,7 @@
                 <img id="pool-pic" src="pool.png" alt="">
                 <p id="pool-pic-caption"><em>Click on the image to zoom in!</em></p>
             </section>
+            <hr>
             <section class="content-section" id="officials">
                 <h2>Officials</h2>
                 <h3 id="officials-list-heading">There are several types of officials, which are needed to manage the competition:</h3>
@@ -114,6 +116,30 @@
                     </li>
                 </ol>
             </section>
+            <section class="content-section" id="famous-swimmers">
+                <h2>Famous swimmers</h2>
+                    <h3>Michael Phelps</h3>
+                    <div class="swimmer-description">
+                        <span class="swimmer-image"><img src="phelps.jpg" alt="Michael Phelps"></span>
+                        <p>
+                            <strong>Michael Fred Phelps II</strong> (born June 30, 1985) is an American former competitive swimmer. He is the most successful and most decorated Olympian of all time with a total of 28 medals. Phelps also holds the all-time records for Olympic gold medals (23), Olympic gold medals in individual events (13), and Olympic medals in individual events (16). When Phelps won eight gold medals at the 2008 Beijing Games, he broke fellow American swimmer Mark Spitz's 1972 record of seven first-place finishes at any single Olympic Games. At the 2004 Summer Olympics in Athens, Phelps already tied the record of eight medals of any color at a single Games by winning six gold and two bronze medals. At the 2012 Summer Olympics in London, Phelps won four gold and two silver medals, and at the 2016 Summer Olympics in Rio de Janeiro, he won five gold medals and one silver. This made him the most successful athlete of the Games for the fourth Olympics in a row.
+                        </p>
+                    </div>
+                    <h3>Adam Peaty</h3>
+                    <div class="swimmer-description">
+                        <span class="swimmer-image"><img src="peaty.jpg" alt="Adam Peaty"></span>
+                        <p>
+                            <strong>Adam George Peaty</strong> (born 28 December 1994) is an English competitive swimmer who specialises in the breaststroke. He won the gold medal in the 100 metre breaststroke at the 2016 Summer Olympics, the first by a male British swimmer in 24 years, and retained the title at the 2020 Summer Olympics in 2021, the first British swimmer ever to retain an Olympic title. He is also an eight-time World Champion, a sixteen-time European Champion and a four-time Commonwealth Champion. According to FINA itself, Peaty is widely regarded as the dominant breaststroke swimmer of his era, and the most dominant sprint breaststroke swimmer of all time.
+                        </p>
+                    </div>
+                    <h3>Caeleb Dressel</h3>
+                    <div class="swimmer-description">
+                        <span class="swimmer-image"><img src="dressel.jpg" alt="Caeleb Dressel"></span>
+                        <p>
+                            <strong>Caeleb Remel Dressel</strong> (born August 16, 1996) is an American professional swimmer who specializes in freestyle, butterfly, and individual medley events. He swims representing the Cali Condors as part of the International Swimming League. He won a record seven gold medals at the 2017 World Aquatics Championships in Budapest, nine medals, six of which were gold, at the 2018 World Swimming Championships in Hangzhou, and eight medals, including six gold, at the 2019 World Aquatics Championships in Gwangju. Dressel is a seven-time Olympic gold medalist and holds world records in the 100 meter butterfly (long course and short course), 50 meter freestyle (short course), and 100 meter individual medley (short course).
+                        </p>
+                    </div>
+            </section>
         </div>
         <nav id="navbar">
             <ul>
@@ -121,8 +147,11 @@
                 <li><a href="#swim-styles">Swim styles</a></li>
                 <li><a href="#competition-pools">Competition pools</a></li>
                 <li><a href="#officials">Officials</a></li>
+                <li><a href="#famous-swimmers">Famous swimmers</a></li>
             </ul>
         </nav>
     </div>
+    <script src="vanilla-tilt.js"></script>
+    <script src="swimming.js"></script>
 </body>
 </html>
