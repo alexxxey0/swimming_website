@@ -28,7 +28,7 @@ class style_description {
     constructor(li, text) {
         this.li = li; // the <li> element, to which the text will be appended
         this.text = text; // the text itself
-        this.is_shown = false; // boolean, that indicates if text is already shown or not
+        this.is_shown = false; // boolean, that indicates if text is already shown or not (initially false)
     }
 
     show_text() {
@@ -65,7 +65,7 @@ for (let i = 0; i < styles.length; i++) {
 
 function zoom_pool_pic() { 
     if (!pool_pic_zoomed_in) {
-        pool_pic.style.width = "100%";
+        pool_pic.style.width = "90%";
         pool_pic.style.cursor = "zoom-out";
     } else {
         pool_pic.style.width = "40%";

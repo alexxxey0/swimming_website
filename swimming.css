@@ -10,7 +10,7 @@ using CSS.
 • Media queries must be included in CSS code. For example, a print version can be developed
 where some parts (for instance, navigation) of the document are hidden. “Print preview”
 function can be used for testing. Or a responsive design features can be implemented using
-media queries
+media queries.
 */
 
 /*
@@ -19,6 +19,10 @@ Contents:
     Quote
     Navigation
     Swim styles
+    Competition pools
+    Officials
+    ...
+    Print version
 */
 
 /* Global properties */
@@ -66,10 +70,10 @@ a {
 
 #quote {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     margin-top: 5%;
-    flex-wrap: wrap;
 }
 
 #quote blockquote {
@@ -80,8 +84,8 @@ a {
 }
 
 #quote img {
-    width: auto;
-    height: auto;
+    width: 25%;
+    min-width: 200px;
     align-self: center;
     border: 5px solid black;
 }
@@ -114,7 +118,7 @@ a {
     border-radius: 10px;
     transition: all 0.5s ease;
     border: 1px solid #0047ab;
-    font-size: 21px;
+    font-size: 22px;
 }
 
 #navbar a {
@@ -153,45 +157,37 @@ a {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#pool-pic-caption {
+    text-align: center;
+}
+
+/* Officials */
+
+#officials-list-heading {
+    padding-left: 40px;
 }
 
 
-/* Mobile version */
-@media (max-width: 800px) {
-    #content {
-        flex-direction: column-reverse;
-        position: relative;
+
+
+@media print {
+    nav, header, #pool-pic-caption {
+        display: none;
     }
 
-    #navbar {
-        position: relative;
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
-    }
-
-    #navbar ul li {
-        font-size: 22px;
+    #quote blockquote, #main {
         width: 100%;
     }
 
-    #navbar ul {
-        margin-left: 0;
-        margin-right: 0;
+    #pool-pic {
+        width: 90%;
     }
 
     #main {
-        width: 90%;
-    }
-
-    #quote blockquote {
-        margin-left: 0;
-        margin-right: 0;
-        width: 90%;
-    }
-
-    #quote {
-        justify-self: stretch;
-        flex-wrap: wrap;
+        margin: 0;
     }
 }
