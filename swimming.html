@@ -18,7 +18,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWIMMING</title>
+    <title>THE ART OF SWIMMING</title>
     <link rel="stylesheet" href="swimming.css">
     <link rel="shortcut icon" href="swimming_icon.png" type="image/x-icon">
 </head>
@@ -47,7 +47,7 @@
             <section class="content-section" id="swim-styles">
                 <h2>Swim styles</h2>
                 <p>
-                    In competitive swimming, four major styles have been established. These have been relatively stable over the last 30–40 years with minor improvements. They are: <span id="style-click-text">(<em>click on a style to learn more about it</em>)</span>
+                    In competitive swimming, four major styles have been established. These have been relatively stable over the last 30–40 years with minor improvements. They are: <span id="style-click-text">(<em>click to learn more</em>)</span>
                 </p>
                 <ul class="swim-styles-list">
                     <li id="butterfly"><a id="butterfly-link"><strong>Butterfly</strong></a></li>
@@ -116,6 +116,7 @@
                     </li>
                 </ol>
             </section>
+            <hr>
             <section class="content-section" id="famous-swimmers">
                 <h2>Famous swimmers</h2>
                     <h3>Michael Phelps</h3>
@@ -140,6 +141,81 @@
                         </p>
                     </div>
             </section>
+            <section class="content-section" id="quiz-section">
+                <h2>Quiz</h2>
+                <h3>Let's see how carefully have you been reading with a little quiz:</h3>
+                <ol id="quiz">
+                    <li>
+                        <h4>How many swim styles are there?</h4>
+                        <div class="options">
+                            <div class="option">
+                                <label for="three">Three</label>
+                                <input type="radio" name="how-many-styles" id="three" value="0">
+                            </div>
+                            <div class="option">
+                                <label for="four">Four</label>
+                                <input type="radio" name="how-many-styles" id="four" value="1">
+                            </div>
+                            <div class="option">
+                                <label for="two">Two</label>
+                                <input type="radio" name="how-many-styles" id="two" value="0">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>How long is World Championship <em>long course</em> pool?</h4>
+                        <div class="options">
+                            <div class="option">
+                                <label for="50m">50 meters</label>
+                                <input type="radio" name="how-long" id="50m" value="1">
+                            </div>
+                            <div class="option">
+                                <label for="25m">25 meters</label>
+                                <input type="radio" name="how-long" id="25m" value="0">
+                            </div>
+                            <div class="option">
+                                <label for="40m">40 meters</label>
+                                <input type="radio" name="how-long" id="40m" value="0">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Which official has full control and authority over all officials?</h4>
+                        <div class="options">
+                            <div class="option">
+                                <label for="starter">Starter</label>
+                                <input type="radio" name="which-official" id="starter" value="0">
+                            </div>
+                            <div class="option">
+                                <label for="timekeeper">Timekeeper</label>
+                                <input type="radio" name="which-official" id="timekeeper" value="0">
+                            </div>
+                            <div class="option">
+                                <label for="referee">Referee</label>
+                                <input type="radio" name="which-official" id="referee" value="1">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Which of these swimmers specializes in breaststroke?</h4>
+                        <div class="options">
+                            <div class="option">
+                                <label for="dressel">Caeleb Dressel</label>
+                                <input type="radio" name="which-swimmer" id="dressel" value="0">
+                            </div>
+                            <div class="option">
+                                <label for="peaty">Adam Peaty</label>
+                                <input type="radio" name="which-swimmer" id="peaty" value="1">
+                            </div>
+                            <div class="option">
+                                <label for="phelps">Michael Phelps</label>
+                                <input type="radio" name="which-swimmer" id="phelps" value="0">
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+                <button type="button" id="check-answers">Check My Answers!</button>
+            </section>
         </div>
         <nav id="navbar">
             <ul>
@@ -148,10 +224,11 @@
                 <li><a href="#competition-pools">Competition pools</a></li>
                 <li><a href="#officials">Officials</a></li>
                 <li><a href="#famous-swimmers">Famous swimmers</a></li>
+                <li><a href="#quiz-section">Quiz</a></li>
             </ul>
         </nav>
     </div>
-    <script src="vanilla-tilt.js"></script>
+    <script src="jquery-3.6.1.js"></script>
     <script src="swimming.js"></script>
 </body>
 </html>

@@ -62,7 +62,7 @@ for (let i = 0; i < styles.length; i++) {
     style_link.addEventListener("click", function() {style_descriptions[i].show_text()});
 }
 
-
+// Function to zoom or unzoom pool picture (is exectued when the picture is clicked)
 function zoom_pool_pic() { 
     if (!pool_pic_zoomed_in) {
         pool_pic.style.width = "90%";
@@ -79,13 +79,37 @@ let pool_pic_zoomed_in = false;
 pool_pic.addEventListener("click", zoom_pool_pic);
 
 
-// Add tilt effects to images with VanillaTilt
-VanillaTilt.init(document.querySelectorAll(".swimmer-image"), {
-    scale: 1.03,
-    perspective: 2000,
-    glare: true,
-    "max-glare": 0.5
+$(function() {
+    const questions = 4;
+    
+    // When button is clicked, check the user's answers
+    $("#check-answers").click(function() {
+        show_result();
+    });
+
+    function show_result() {
+        let checked = 0;
+        let correct = 0;
+        $("#result-text").remove();
+
+        $("#quiz input").each(function() { // Count how many questions user has answered
+            if ($(this).is(":checked")) checked++;
+        });
+
+        if (checked < questions) $("#quiz-section").append("<div id='result-text'>Please answer all the questions!</div>");
+        else {
+            $("#quiz input:checked").each(function() { // Count how many questions user has answered correctly
+                if ($(this).val() === "1") correct++;
+            });
+
+            if (correct === questions) $("#quiz-section").append("<div id='result-text'>You answered all of the questions correctly! Good job!</div");
+            else if (correct === 0) $("#quiz-section").append("<div id='result-text'>You didn't answer any of the questions correctly! Why won't you try again?</div>");
+            else $("#quiz-section").append("<div id='result-text'>You answered " + correct + " out of " + questions + " questions correctly! Not bad!</div>");
+        }
+        window.scrollTo(0, document.body.scrollHeight);
+    }
 });
+
 
 
 
