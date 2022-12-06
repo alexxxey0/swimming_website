@@ -96,7 +96,7 @@ $(function() {
             if ($(this).is(":checked")) checked++;
         });
 
-        if (checked < questions) $("#quiz-section").append("<div id='result-text'>Please answer all the questions!</div>");
+        if (checked < questions) $("#quiz-section").append("<div id='result-text'>Please answer all of the the questions!</div>");
         else {
             $("#quiz input:checked").each(function() { // Count how many questions user has answered correctly
                 if ($(this).val() === "1") correct++;
