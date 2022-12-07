@@ -21,6 +21,8 @@ Contents:
     Swim styles
     Competition pools
     Officials
+    Famous swimmers
+    Quiz
     ...
     Print version
 */
@@ -175,7 +177,6 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    flex-wrap: wrap;
 }
 
 .swimmer-description img {
@@ -185,7 +186,6 @@ a {
 
 .swimmer-image {
     width: 30%;
-    min-width: 200px;
 }
 
 .swimmer-description p {

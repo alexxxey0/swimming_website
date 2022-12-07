@@ -32,9 +32,8 @@ class style_description {
     }
 
     show_text() {
-        if (!this.is_shown) { // if text is not shown, show it
-            this.li.append(this.text);
-        } else this.text.remove(); // if text is already shown, remove it
+        if (!this.is_shown) this.li.append(this.text); // if text is not shown, show it
+        else this.text.remove(); // if text is already shown, remove it
         this.is_shown = !this.is_shown;
     }
 }
@@ -79,6 +78,7 @@ let pool_pic_zoomed_in = false;
 pool_pic.addEventListener("click", zoom_pool_pic);
 
 
+
 $(function() {
     const questions = 4;
     
@@ -90,7 +90,7 @@ $(function() {
     function show_result() {
         let checked = 0;
         let correct = 0;
-        $("#result-text").remove();
+        $("#result-text").remove(); // Clear the result text
 
         $("#quiz input").each(function() { // Count how many questions user has answered
             if ($(this).is(":checked")) checked++;
