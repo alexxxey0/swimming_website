@@ -29,6 +29,10 @@ Contents:
 
 /* Global properties */
 
+:root {
+    --dark-blue: #0047ab;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -52,7 +56,7 @@ header h1 {
     padding-top: 2%;
     padding-bottom: 2%;
     text-align: center;
-    background-color: #0047ab;
+    background-color: var(--dark-blue);
     color: white;
 }
 
@@ -62,7 +66,7 @@ header h1 {
     padding-right: 1%;
 }
 
-.content-section p, .swim-styles-list { /* Formatting two classes */
+.content-section p, .swim-styles-list  { /* Formatting two classes */
     font-size: 18px;
     line-height: 1.5;
 }
@@ -118,7 +122,7 @@ a {
 }
 
 #navbar ul li {
-    background-color: #0047ab;
+    background-color: var(--dark-blue);
     margin-bottom: 5%;
     border-radius: 10px;
     transition: all 0.5s ease;
@@ -135,11 +139,11 @@ a {
 
 #navbar li:hover {
     background-color: white;
-    border: 1px solid #0047ab;
+    border: 1px solid var(--dark-blue);
 }
 
 #navbar li:hover a {
-    color: #0047ab;
+    color: var(--dark-blue);
 }
 
 /* Swim styles */
@@ -148,6 +152,10 @@ a {
     text-decoration: underline;
 }
 
+#swim-styles p::after {
+    content: "(click to learn more)";
+    font-style: italic;
+}
 /* Competition pools */
 
 #pool-pic {
@@ -161,8 +169,13 @@ a {
     border-radius: 5px;
 }
 
-#pool-pic-caption {
+#competition-pools::after {
+    content: "Click on the image to zoom in!";
+    font-size: 18px;
     text-align: center;
+    display: block;
+    margin-top: 2%;
+    font-style: italic;
 }
 
 /* Officials */
@@ -216,16 +229,16 @@ label, input {
     margin-right: auto;
     margin-top: 5%;
     padding: 1%;
-    background-color: #0047ab;
+    background-color: var(--dark-blue);
     color: white;
-    border: 2px solid #0047ab;
+    border: 2px solid var(--dark-blue);
     font-size: 20px;
 }
 
 #check-answers:hover {
     background-color: white;
-    color: #0047ab;
-    border: 2px solid #0047ab;
+    color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
     cursor: pointer;
 }
 
@@ -237,7 +250,7 @@ label, input {
     padding-top: 3%;
     text-align: center;
     font-size: 30px;
-    color: #0047ab;
+    color: var(--dark-blue);
 }
 
 
@@ -260,8 +273,12 @@ label, input {
         margin: 0;
     }
 
-    #style-click-text {
-        display: none;
+    #swim-styles p::after {
+        content: "";
+    }
+
+    #competition-pools::after {
+        content: "";
     }
 
     #check-answers {

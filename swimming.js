@@ -78,11 +78,11 @@ let pool_pic_zoomed_in = false;
 pool_pic.addEventListener("click", zoom_pool_pic);
 
 
-
+// JQuery 
 $(function() {
     const questions = 4;
     
-    // When button is clicked, check the user's answers
+    // When button is clicked, check the user's answers and show result
     $("#check-answers").click(function() {
         show_result();
     });
@@ -96,10 +96,10 @@ $(function() {
             if ($(this).is(":checked")) checked++;
         });
 
-        if (checked < questions) $("#quiz-section").append("<div id='result-text'>Please answer all of the the questions!</div>");
+        if (checked < questions) $("#quiz-section").append("<div id='result-text'>Please answer all of the questions!</div>");
         else {
             $("#quiz input:checked").each(function() { // Count how many questions user has answered correctly
-                if ($(this).val() === "1") correct++;
+                if ($(this).val() == 1) correct++;
             });
 
             if (correct === questions) $("#quiz-section").append("<div id='result-text'>You answered all of the questions correctly! Good job!</div");
