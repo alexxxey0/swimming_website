@@ -257,24 +257,26 @@ label, input {
 
 #img-gallery {
     position: relative;
+    --img-width: 45%;
 }
 
 
 #img-gallery img {
-    width: 40%;
-    height: 300px;
+    width: var(--img-width);
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: 3px solid black;
+    padding: 3%;
 }
 
-#img-gallery img:not(img:nth-of-type(2)) {
+#img-gallery img:not(img:nth-of-type(2)) { /* hide all the images, except the second one */
     display: none;
 }
 
 #scroll-left, #scroll-right {
     border: 1px solid black;
-    font-size: 25px;
+    font-size: 30px;
     position: absolute;
     top: calc(50% - 25px);
     background-color: black;
@@ -282,11 +284,16 @@ label, input {
 }
 
 #scroll-left {
-    left: 30%;
+    left: calc((100% - var(--img-width)) / 2);
 }
 
 #scroll-right {
-    right: 30%;
+    right: calc((100% - var(--img-width)) / 2);
+}
+
+#scroll-left:active, #scroll-right:active {
+    color: black;
+    background-color: white;
 }
 
 

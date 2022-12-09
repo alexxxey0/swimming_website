@@ -109,8 +109,9 @@ $(function() {
         window.scrollTo(0, document.body.scrollHeight); // scroll to the bottom of the page
     }
 
+
     let images = [];
-    $("#img-gallery img").each(function(index, object) {
+    $("#img-gallery img").each(function(index, object) { // fill array with images
         images[index] = object;
     })
 
