@@ -253,6 +253,42 @@ label, input {
     color: var(--dark-blue);
 }
 
+/* Image gallery */
+
+#img-gallery {
+    position: relative;
+}
+
+
+#img-gallery img {
+    width: 40%;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#img-gallery img:not(img:nth-of-type(2)) {
+    display: none;
+}
+
+#scroll-left, #scroll-right {
+    border: 1px solid black;
+    font-size: 25px;
+    position: absolute;
+    top: calc(50% - 25px);
+    background-color: black;
+    color: white;
+}
+
+#scroll-left {
+    left: 30%;
+}
+
+#scroll-right {
+    right: 30%;
+}
+
 
 /* Print version */
 

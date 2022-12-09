@@ -61,7 +61,7 @@ for (let i = 0; i < styles.length; i++) {
     style_link.addEventListener("click", function() {style_descriptions[i].show_text()});
 }
 
-// Function to zoom or unzoom pool picture (is exectued when the picture is clicked)
+// Function to zoom or unzoom pool picture (is executed when the picture is clicked)
 function zoom_pool_pic() { 
     if (!pool_pic_zoomed_in) {
         pool_pic.style.width = "90%";
@@ -106,8 +106,49 @@ $(function() {
             else if (correct === 0) $("#quiz-section").append("<div id='result-text'>You didn't answer any of the questions correctly! Why won't you try again?</div>");
             else $("#quiz-section").append("<div id='result-text'>You answered " + correct + " out of " + questions + " questions correctly! Not bad!</div>");
         }
-        window.scrollTo(0, document.body.scrollHeight);
+        window.scrollTo(0, document.body.scrollHeight); // scroll to the bottom of the page
     }
+
+    let images = [];
+    $("#img-gallery img").each(function(index, object) {
+        images[index] = object;
+    })
+
+
+    $("#scroll-left").click(function() {
+        scroll_left();
+    });
+
+    function scroll_left() {
+        $(images).each(function(index) {
+            if ($(this).css("display") == "block") {
+                $(this).css({"display": "none"});
+                if (index > 0) $(images[index-1]).css({"display": "block"});
+                else {
+                    $(images[images.length-1]).css({"display": "block"});
+                    return false;
+                }
+            }
+        })
+    }
+
+    $("#scroll-right").click(function() {
+        scroll_right();
+    })
+
+    function scroll_right() {
+        $(images).each(function(index) {
+            if ($(this).css("display") == "block") {
+                $(this).css({"display": "none"});
+                if (index < images.length-1) {
+                    $(images[index+1]).css({"display": "block"});
+                    return false;
+                }
+                else $(images[0]).css({"display": "block"});
+            }
+        })
+    }
+
 });
 
 
