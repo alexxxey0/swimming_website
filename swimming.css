@@ -32,18 +32,32 @@ Contents:
 
 :root {
     --dark-blue: #0047ab;
+    --neon-blue: #1F51FF;
 }
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #E5E4E2;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 #main {
-    margin-left: 5%;
+    margin-left: 3%;
     margin-right: auto;
     width: 75%;
+    background-color: white;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#main .content-section {
     background-color: white;
 }
 
@@ -57,7 +71,8 @@ header h1 {
     padding-top: 2%;
     padding-bottom: 2%;
     text-align: center;
-    background-color: var(--dark-blue);
+    background-color: black;
+    border-bottom: 5px solid var(--neon-blue);
     color: white;
 }
 
@@ -72,8 +87,14 @@ header h1 {
     line-height: 1.5;
 }
 
+
 a {
     cursor: pointer;
+}
+
+.content-section {
+    box-shadow: 10px 10px 8px gray;
+    border-radius: 8px;
 }
 
 /* Quote */
@@ -83,7 +104,6 @@ a {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin-top: 5%;
 }
 
 #quote blockquote {
@@ -94,10 +114,9 @@ a {
 }
 
 #quote img {
-    width: 25%;
-    min-width: 200px;
+    height: 80%;
+    min-height: 200px;
     align-self: center;
-    border: 5px solid black;
 }
 
 /* Navigation */
@@ -105,30 +124,35 @@ a {
 #content {
     display: flex;
     flex-direction: row;
+    margin-top: 3%;
 }
 
 #navbar {
     width: 20%;
-    text-align: left;
-    position: sticky;
-    top: 0;
-    align-self: flex-start;
 }
 
 #navbar ul {
+    display: flex;
+    position: sticky;
+    top: 2%;
+    flex-direction: column;
+    justify-content: flex-start;
     list-style-type: none;
     padding: 0;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 0;
 }
 
 #navbar ul li {
-    background-color: var(--dark-blue);
+    background-color: black;
     margin-bottom: 5%;
     border-radius: 10px;
     transition: all 0.5s ease;
-    border: 1px solid #0047ab;
+    border: 3px solid var(--neon-blue);
     font-size: 22px;
+    font-weight: 550;
+    padding: 2px;
 }
 
 #navbar a {
@@ -140,11 +164,11 @@ a {
 
 #navbar li:hover {
     background-color: white;
-    border: 1px solid var(--dark-blue);
+    border: 3px solid var(--neon-blue);
 }
 
 #navbar li:hover a {
-    color: var(--dark-blue);
+    color: black;
 }
 
 /* Swim styles */
@@ -177,6 +201,7 @@ a {
     display: block;
     margin-top: 2%;
     font-style: italic;
+    margin-bottom: 1%;
 }
 
 /* Officials */
@@ -208,6 +233,10 @@ a {
 
 /* Quiz */
 
+#quiz-section {
+    margin-bottom: 5%;
+}
+
 input {
     padding-left: 5%;
 }
@@ -238,7 +267,9 @@ label {
     background-color: var(--dark-blue);
     color: white;
     border: 2px solid var(--dark-blue);
+    border-radius: 5px;
     font-size: 20px;
+    margin-bottom: 2%;
 }
 
 #check-answers:hover {
@@ -257,6 +288,7 @@ label {
     text-align: center;
     font-size: 30px;
     color: var(--dark-blue);
+    margin-bottom: 2%;
 }
 
 /* Image gallery */
@@ -328,6 +360,7 @@ label {
 
     #main {
         margin: 0;
+        border: 0;
     }
 
     /* We don't need 'click here' messages in the print version */

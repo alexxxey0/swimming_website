@@ -88,6 +88,7 @@ $(function() {
     });
 
     function show_result() {
+        $("#check-answers").css({"margin-bottom": "0"});
         let checked = 0;
         let correct = 0;
         $("#result-text").remove(); // Clear the result text
