@@ -48,7 +48,7 @@ const style_texts = ["The butterfly (colloquially shortened to fly) is a swimmin
 "Freestyle is a category of swimming competition, defined by the rules of the International Swimming Federation (FINA), in which competitors are subject to a few limited restrictions on their swimming stroke. Freestyle races are the most common of all swimming competitions, with distances beginning with 50 meters (50 yards) and reaching 1500 meters (1650 yards), also known as the mile. The term 'freestyle stroke' is sometimes used as a synonym for 'front crawl', as front crawl is the fastest surface swimming stroke. It is now the most common stroke used in freestyle competitions."
 ];
 
-const style_descriptions = []; // array, that will contain all of the styles descriptions (initialized empty)
+let style_descriptions = []; // array, that will contain all of the styles descriptions (initialized empty)
 
 // "for" loop to create all of styles descriptions as objects, and add an event listener for that object
 for (let i = 0; i < styles.length; i++) {
@@ -121,12 +121,12 @@ $(function() {
     });
 
     function scroll_left() {
-        $(images).each(function(index) {
+        $.each(images, function(index) {
             if ($(this).css("display") == "block") {
                 $(this).css({"display": "none"});
-                if (index > 0) $(images[index-1]).css({"display": "block"});
+                if (index > 0) $(images[index-1]).css({"display": "block"}); // if current image isn't the first image, show the previous image
                 else {
-                    $(images[images.length-1]).css({"display": "block"});
+                    $(images[images.length-1]).css({"display": "block"}); // if current image is the first image, show the last image
                     return false;
                 }
             }
@@ -138,17 +138,18 @@ $(function() {
     })
 
     function scroll_right() {
-        $(images).each(function(index) {
+        $.each(images, function(index) {
             if ($(this).css("display") == "block") {
                 $(this).css({"display": "none"});
-                if (index < images.length-1) {
+                if (index < images.length-1) { // if current image isn't the last , show the next image
                     $(images[index+1]).css({"display": "block"});
                     return false;
                 }
-                else $(images[0]).css({"display": "block"});
+                else $(images[0]).css({"display": "block"}); // if current image is the last image, show the first image
             }
         })
     }
+
 
 });
 

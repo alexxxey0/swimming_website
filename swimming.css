@@ -23,6 +23,7 @@ Contents:
     Officials
     Famous swimmers
     Quiz
+    Image gallery
     ...
     Print version
 */
@@ -207,8 +208,13 @@ a {
 
 /* Quiz */
 
-label, input {
+input {
     padding-left: 5%;
+}
+
+label {
+    display: inline-block;
+    width: 120px;
 }
 
 .options {
@@ -257,9 +263,8 @@ label, input {
 
 #img-gallery {
     position: relative;
-    --img-width: 45%;
+    --img-width: 70%;
 }
-
 
 #img-gallery img {
     width: var(--img-width);
@@ -267,7 +272,9 @@ label, input {
     margin-left: auto;
     margin-right: auto;
     border: 3px solid black;
-    padding: 3%;
+    border-radius: 50px;
+
+    margin-bottom: 3%;
 }
 
 #img-gallery img:not(img:nth-of-type(2)) { /* hide all the images, except the second one */
@@ -278,7 +285,11 @@ label, input {
     border: 1px solid black;
     font-size: 30px;
     position: absolute;
-    top: calc(50% - 25px);
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+    height: 10%;
     background-color: black;
     color: white;
 }
@@ -296,6 +307,9 @@ label, input {
     background-color: white;
 }
 
+#scroll-left:hover, #scroll-right:hover {
+    cursor: pointer;
+}
 
 /* Print version */
 
@@ -316,7 +330,8 @@ label, input {
         margin: 0;
     }
 
-    #swim-styles p::after {
+    /* We don't need 'click here' messages in the print version */
+    #swim-styles p::after { 
         content: "";
     }
 
