@@ -1,0 +1,236 @@
+<!--
+• The page has to be developed according to HTML 5 or XHTML1.0
+• Strict standard. DOCTYPE has to be declared and the document must conform to it.
+• The document must validate using the W3C validator (http://validator.w3.org).
+• ID and class attributes must be used appropriately throughout the document.
+• HTML elements must be used according to their semantics.
+• HTML document must contain all of these element types:
+    – headings (different levels)
+    – lists (ordered and unordered)
+    – basic text formatting (paragraphs, line breaks, bold, italics)
+    – images
+    – data input form elements (later accessed from JavaScript code)
+• UTF-8 encoding is used.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE ART OF SWIMMING</title>
+    <link rel="stylesheet" href="swimming.css">
+    <link rel="shortcut icon" href="swimming_icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>THE ART OF SWIMMING</h1>
+    </header>
+    <div id="content"> <!--The whole content of the page (everything except the header)-->
+        <div id="main"> <!-- Main content of the page (navigation not included) -->
+            <div id="quote" class="content-section">
+                <blockquote>
+                    “The water is your friend... you don't have to fight with water, just share the same spirit as the water,
+                    and it will help you move.” <br> — <em>Alexander Popov</em>
+                </blockquote>
+                <img src="popov.jpeg" alt="Alexander Popov">
+            </div>
+            <section class="content-section" id="what-is-swimming">
+                <h2>What is swimming?</h2>
+                <p>
+                    <strong>Swimming</strong> is an individual or team racing sport that requires the use of one's entire body to move through water. The sport takes place in pools or open water (e.g., in a sea or lake). Competitive swimming is one of the most popular Olympic sports, with varied distance events in butterfly, backstroke, breaststroke, freestyle, and individual medley. In addition to these individual events, four swimmers can take part in either a freestyle or medley relay. A medley relay consists of four swimmers who will each swim a different stroke, ordered as backstroke, breaststroke, butterfly and freestyle.
+
+                    Swimming each stroke requires a set of specific techniques; in competition, there are distinct regulations concerning the acceptable form for each individual stroke. There are also regulations on what types of swimsuits, caps, jewelry and injury tape that are allowed at competitions. Although it is possible for competitive swimmers to incur several injuries from the sport, such as tendinitis in the shoulders or knees, there are also multiple health benefits associated with the sport.
+                </p>
+                <div id="img-gallery">                      
+                    <img src="pic1.jpg" alt="">
+                    <img src="pic2.jpg" alt="">
+                    <img src="pic3.jpg" alt="">
+                    <button type="button" id="scroll-left">&lt;</button>
+                    <button type="button" id="scroll-right">&gt;</button>
+                </div>
+            </section>
+            <section class="content-section" id="swim-styles">
+                <h2>Swim styles</h2>
+                <p>
+                    In competitive swimming, four major styles have been established. These have been relatively stable over the last 30–40 years with minor improvements. They are:
+                </p>
+                <ul class="swim-styles-list">
+                    <li id="butterfly"><a id="butterfly-link"><strong>Butterfly</strong></a></li>
+                    <li id="backstroke"><a id="backstroke-link"><strong>Backstroke</strong></a></li>
+                    <li id="breaststroke"><a id="breaststroke-link"><strong>Breaststroke</strong></a></li>
+                    <li id="freestyle"><a id="freestyle-link"><strong>Freestyle</strong></a></li>
+                </ul>
+            </section>
+            <section class="content-section" id="competition-pools">
+                <h2>Competition pools</h2>
+                <p>
+                    World Championship pools must be 50 metres (160 ft) (long course) long and 25 metres (82 ft) wide, with ten lanes labelled zero to nine (or one to ten in some pools; zero and nine (or one and ten) are usually left empty in semi-finals and finals); the lanes must be at least 2.5 metres (8.2 ft) wide. They will be equipped with starting blocks at both ends of the pool and most will have Automatic Officiating Equipment, including touch pads to record times and sensors to ensure the legality of relay takeovers. The pool must have a minimum depth of two metres.
+
+                    Other pools which host events under FINA regulations are required to meet some but not all of these requirements. Many of these pools have eight, or even six, instead of ten lanes and some will be 25 metres (82 ft) long, making them Short course. World records that are set in short course pools are kept separate from those set in long course pools because it may be an advantage or disadvantage to swimmers to have more or less turns in a race.
+                </p>
+                <img id="pool-pic" src="pool.png" alt="Competition pool">
+            </section>
+            <section class="content-section" id="officials">
+                <h2>Officials</h2>
+                <h3 id="officials-list-heading">There are several types of officials, which are needed to manage the competition:</h3>
+                <ol>
+                    <li>
+                        <h3>Referee</h3>
+                        <p>
+                            The referee has full control and authority over all officials. The referee will enforce all rules and decisions of FINA and shall have the final answer to all questions relating to the actual conduct of anything regarding the meet, as well as the final settlement of which is not otherwise covered by the rules. The referee takes overall responsibility for running the meet and makes the final decisions as to who wins each race. Referees call swimmers to the blocks with short blasts of their whistles. This is the signal for the swimmers to stand next to their blocks. Then the referee will blow a long whistle that will tell the swimmers to step on the block. For backstroke events, the long whistle is the signal for the swimmers to jump into the water. The referee will then blow another long whistle, signalling the swimmers to grab the gutter or the provided block handle. Finally the referee will hand over the rest to the starter by directing their hand to the starter.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Starter</h3>
+                        <p>
+                            The starter has full control of the swimmers from the time the referee turns the swimmers over to them until the race commences. A starter begins the race by saying, "Take your mark." At this point, the swimmers will get into stationary positions in which they would like to start their race. After all swimmers have assumed their stationary position, the starter will push a button on the starting system, signaling the start of a race with a loud noise (usually a beep or a horn) and flash from a strobe light. A starter sends the swimmers off the blocks and may call a false start if a swimmer leaves the block before the starter sends them. A starter may also choose to recall the race after the start for any reason or request the swimmers to "stand", "relax" or "step down" if they believe that (a) particular swimmer(s) has gotten an unfair advantage at the start.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Clerk of course</h3>
+                        <p>
+                            The clerk of course (also called the "bullpen") assembles swimmers prior to each event, and is responsible for organizing ("seeding") swimmers into heats based on their times. Heats are generally seeded from slowest to fastest, where swimmers with no previous time for an event are assumed to be the slowest. The clerk of the course is also responsible for recording and reporting swimmers who have chosen to "scratch" (not swim) their events after they have signed up or qualified to a semifinal or final. The clerk is also responsible for enforcing rules of the swim meet if a swimmer chooses to not show up ("No show" - NS) to their events.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Timekeepers</h3>
+                        <p>
+                            Each timekeeper takes the time of the swimmers in the lane assigned to them. Unless a video backup system is used, it may be necessary to use the full complement of timekeepers even when automatic officiating equipment is used. A chief timekeeper assigns the seating positions for all timekeepers and the lanes for which they are responsible. In most competitions there will be one or more timekeepers per lane. In international competitions where full automatic timing and video placing equipment is in use timekeepers may not be required.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Inspectors of turns</h3>
+                        <p>
+                            Inspectors of turns: One inspector of turns is assigned to one or more lanes at each end of the pool. Each inspector of turns ensures that swimmers comply with the relevant rules for turning, as well as the relevant rules for start and finish of the race. Inspectors of turns shall report any violation on disqualification reports detailing the event, lane number, and the infringement delivered to the chief inspector of turns who will immediately convey the report to the referee.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Judges of stroke</h3>
+                        <p>
+                            Judges of stroke are located on each side of the pool. They follow the swimmers during their swim back and forth across the pool. They ensure that the rules related to the style of swimming designated for the event are being observed, and observe the turns and the finishes to assist the inspectors of turns.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Finish judges</h3>
+                        <p>
+                            Finish judges determine the order of finish and make sure the swimmers finish in accordance with the rules (two hands simultaneously for breaststroke and butterfly, on the back for backstroke, etc.)
+                        </p>
+                    </li>
+                </ol>
+            </section>
+            <section class="content-section" id="famous-swimmers">
+                <h2>Famous swimmers</h2>
+                    <h3>Michael Phelps</h3>
+                    <div class="swimmer-description">
+                        <span class="swimmer-image"><img src="phelps.jpg" alt="Michael Phelps"></span>
+                        <p>
+                            <strong>Michael Fred Phelps II</strong> (born June 30, 1985) is an American former competitive swimmer. He is the most successful and most decorated Olympian of all time with a total of 28 medals. Phelps also holds the all-time records for Olympic gold medals (23), Olympic gold medals in individual events (13), and Olympic medals in individual events (16). When Phelps won eight gold medals at the 2008 Beijing Games, he broke fellow American swimmer Mark Spitz's 1972 record of seven first-place finishes at any single Olympic Games. At the 2004 Summer Olympics in Athens, Phelps already tied the record of eight medals of any color at a single Games by winning six gold and two bronze medals. At the 2012 Summer Olympics in London, Phelps won four gold and two silver medals, and at the 2016 Summer Olympics in Rio de Janeiro, he won five gold medals and one silver. This made him the most successful athlete of the Games for the fourth Olympics in a row.
+                        </p>
+                    </div>
+                    <h3>Adam Peaty</h3>
+                    <div class="swimmer-description">
+                        <span class="swimmer-image"><img src="peaty.jpg" alt="Adam Peaty"></span>
+                        <p>
+                            <strong>Adam George Peaty</strong> (born 28 December 1994) is an English competitive swimmer who specialises in the breaststroke. He won the gold medal in the 100 metre breaststroke at the 2016 Summer Olympics, the first by a male British swimmer in 24 years, and retained the title at the 2020 Summer Olympics in 2021, the first British swimmer ever to retain an Olympic title. He is also an eight-time World Champion, a sixteen-time European Champion and a four-time Commonwealth Champion. According to FINA itself, Peaty is widely regarded as the dominant breaststroke swimmer of his era, and the most dominant sprint breaststroke swimmer of all time.
+                        </p>
+                    </div>
+                    <h3>Caeleb Dressel</h3>
+                    <div class="swimmer-description">
+                        <span class="swimmer-image"><img src="dressel.jpg" alt="Caeleb Dressel"></span>
+                        <p>
+                            <strong>Caeleb Remel Dressel</strong> (born August 16, 1996) is an American professional swimmer who specializes in freestyle, butterfly, and individual medley events. He swims representing the Cali Condors as part of the International Swimming League. He won a record seven gold medals at the 2017 World Aquatics Championships in Budapest, nine medals, six of which were gold, at the 2018 World Swimming Championships in Hangzhou, and eight medals, including six gold, at the 2019 World Aquatics Championships in Gwangju. Dressel is a seven-time Olympic gold medalist and holds world records in the 100 meter butterfly (long course and short course), 50 meter freestyle (short course), and 100 meter individual medley (short course).
+                        </p>
+                    </div>
+            </section>
+            <section class="content-section" id="quiz-section">
+                <h2>Quiz</h2>
+                <h3>Let's see how carefully have you been reading with a little quiz:</h3>
+                <ol id="quiz">
+                    <li>
+                        <h4>How many swim styles are there?</h4>
+                        <div class="options">
+                            <div class="option">
+                                <label for="three">Three</label>
+                                <input type="radio" name="how-many-styles" id="three" value="0">
+                            </div>
+                            <div class="option">
+                                <label for="four">Four</label>
+                                <input type="radio" name="how-many-styles" id="four" value="1">
+                            </div>
+                            <div class="option">
+                                <label for="two">Two</label>
+                                <input type="radio" name="how-many-styles" id="two" value="0">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>How long is World Championship <em>long course</em> pool?</h4>
+                        <div class="options">
+                            <div class="option">
+                                <label for="50m">50 meters</label>
+                                <input type="radio" name="how-long" id="50m" value="1">
+                            </div>
+                            <div class="option">
+                                <label for="25m">25 meters</label>
+                                <input type="radio" name="how-long" id="25m" value="0">
+                            </div>
+                            <div class="option">
+                                <label for="40m">40 meters</label>
+                                <input type="radio" name="how-long" id="40m" value="0">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Which official has full control and authority over all officials?</h4>
+                        <div class="options">
+                            <div class="option">
+                                <label for="starter">Starter</label>
+                                <input type="radio" name="which-official" id="starter" value="0">
+                            </div>
+                            <div class="option">
+                                <label for="timekeeper">Timekeeper</label>
+                                <input type="radio" name="which-official" id="timekeeper" value="0">
+                            </div>
+                            <div class="option">
+                                <label for="referee">Referee</label>
+                                <input type="radio" name="which-official" id="referee" value="1">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Which of these swimmers specializes in breaststroke?</h4>
+                        <div class="options">
+                            <div class="option">
+                                <label for="dressel">Caeleb Dressel</label>
+                                <input type="radio" name="which-swimmer" id="dressel" value="0">
+                            </div>
+                            <div class="option">
+                                <label for="peaty">Adam Peaty</label>
+                                <input type="radio" name="which-swimmer" id="peaty" value="1">
+                            </div>
+                            <div class="option">
+                                <label for="phelps">Michael Phelps</label>
+                                <input type="radio" name="which-swimmer" id="phelps" value="0">
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+                <button type="button" id="check-answers">Check My Answers!</button>
+            </section>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#what-is-swimming">What is swimming?</a></li>
+                <li><a href="#swim-styles">Swim styles</a></li>
+                <li><a href="#competition-pools">Competition pools</a></li>
+                <li><a href="#officials">Officials</a></li>
+                <li><a href="#famous-swimmers">Famous swimmers</a></li>
+                <li><a href="#quiz-section">Quiz</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="jquery-3.6.1.js"></script>
+    <script src="swimming.js"></script>
+</body>
+</html>

@@ -28,7 +28,7 @@ Contents:
     Print version
 */
 
-/* Global properties */
+/* Global / He properties */
 
 :root {
     --dark-blue: #0047ab;
@@ -41,7 +41,6 @@ body {
     background-image: url("background.jpg");
     background-size: cover;
     background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 #main {
@@ -54,7 +53,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0); /* transparent background */
 }
 
 #main .content-section {
@@ -66,7 +65,7 @@ h2, h3, h4 {
 }
 
 header h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Montserrat;
     margin: 0;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -101,7 +100,6 @@ a {
 
 #quote {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 }
@@ -115,7 +113,6 @@ a {
 
 #quote img {
     height: 80%;
-    min-height: 200px;
     align-self: center;
 }
 
@@ -233,10 +230,6 @@ a {
 
 /* Quiz */
 
-#quiz-section {
-    margin-bottom: 5%;
-}
-
 input {
     padding-left: 5%;
 }
@@ -346,7 +339,7 @@ label {
 /* Print version */
 
 @media print {
-    nav, header, #pool-pic-caption {
+    nav, header, #pool-pic-caption, #scroll-left, #scroll-right, #check-answers {
         display: none;
     }
 
@@ -363,6 +356,10 @@ label {
         border: 0;
     }
 
+    .content-section {
+        box-shadow: 0 0;
+    }
+
     /* We don't need 'click here' messages in the print version */
     #swim-styles p::after { 
         content: "";
@@ -370,9 +367,5 @@ label {
 
     #competition-pools::after {
         content: "";
-    }
-
-    #check-answers {
-        display: none;
     }
 }

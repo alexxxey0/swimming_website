@@ -89,9 +89,9 @@ $(function() {
 
     function show_result() {
         $("#check-answers").css({"margin-bottom": "0"});
+        $("#result-text").remove(); // Clear the result text
         let checked = 0;
         let correct = 0;
-        $("#result-text").remove(); // Clear the result text
 
         $("#quiz input").each(function() { // Count how many questions user has answered
             if ($(this).is(":checked")) checked++;
@@ -115,7 +115,6 @@ $(function() {
     $("#img-gallery img").each(function(index, object) { // fill array with images
         images[index] = object;
     })
-
 
     $("#scroll-left").click(function() {
         scroll_left();
