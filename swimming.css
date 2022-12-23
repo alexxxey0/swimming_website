@@ -24,11 +24,13 @@ Contents:
     Famous swimmers
     Quiz
     Image gallery
+    Form
     ...
     Print version
+    Mobile version
 */
 
-/* Global / He properties */
+/* Global properties */
 
 :root {
     --dark-blue: #0047ab;
@@ -414,9 +416,14 @@ label {
     #competition-pools::after {
         content: "";
     }
+
+    /* We don't need the form in the print version */
+    .form {
+        display: none;
+    }
 }
 
-/* Print version */
+/* Mobile version */
 
 @media screen and (max-width: 768px) {
     #content {

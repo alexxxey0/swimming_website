@@ -106,7 +106,7 @@ function validate_form(event) {
         else error_text += "Warning! The last name should contain only letters!\n";
     }
 
-    if (email.value === "") error_text += "Warning! Please enter an email!\n"
+    if (email.value === "") error_text += "Warning! Please enter an email!\n";
 
     if (age.value === "" || isNaN(age.value) || age.value <= 0 || age.value > 150) {
         if (age.value === "") error_text += "Warning! Please enter an age!\n";
@@ -176,6 +176,7 @@ $(function() {
         })
     }
 
+    
     $("#scroll-right").click(function() {
         scroll_right();
     })
@@ -193,9 +194,5 @@ $(function() {
         })
     }
 
+
 });
-
-
-
-
-
