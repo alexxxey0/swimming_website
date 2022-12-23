@@ -77,6 +77,49 @@ const pool_pic = document.getElementById("pool-pic");
 let pool_pic_zoomed_in = false;
 pool_pic.addEventListener("click", zoom_pool_pic);
 
+//Form validation (might delete later)
+
+const form = document.getElementById("form");
+const first_name = document.getElementById("first-name");
+const last_name = document.getElementById("last-name");
+const email = document.getElementById("email");
+const age = document.getElementById("age");
+const submit_button = document.getElementById("form-submit");
+form.addEventListener("submit", validate_form);
+
+const letters_regexp = /^[a-z]+$/i; // regular expression to check if string contains only letters and no numbers or other symbols
+                                    // ^ - the string should begin with a letter
+                                    // [a-z]+ - every next character should also be a letter
+                                    // $ - the string should end with a letter as well
+                                    // i - make the check case insensitive
+
+function validate_form(event) {
+    let error_text = "";
+    
+    if (first_name.value === "" || !letters_regexp.test(first_name.value)) {
+        if (first_name.value === "") error_text += "Warning! Please enter a name!\n";
+        else error_text += "Warning! The name should contain only letters!\n";
+    }
+
+    if (last_name.value === "" || !letters_regexp.test(last_name.value)) {
+        if (last_name.value === "") error_text += "Warning! Please enter a last name!\n";
+        else error_text += "Warning! The last name should contain only letters!\n";
+    }
+
+    if (email.value === "") error_text += "Warning! Please enter an email!\n"
+
+    if (age.value === "" || isNaN(age.value) || age.value <= 0 || age.value > 150) {
+        if (age.value === "") error_text += "Warning! Please enter an age!\n";
+        else if (isNaN(age.value)) error_text += "Warning! The age should be a number!\n";
+        else if (age.value <= 0) error_text += "Warning! The age cannot be less than or equal to 0!\n";
+        else error_text += "Warning! The age cannot be greater than 150!\n"
+    }
+
+    if (error_text !== "") {
+        alert(error_text);
+        event.preventDefault();
+    }
+}
 
 // JQuery 
 $(function() {
@@ -107,7 +150,7 @@ $(function() {
             else if (correct === 0) $("#quiz-section").append("<div id='result-text'>You didn't answer any of the questions correctly! Why won't you try again?</div>");
             else $("#quiz-section").append("<div id='result-text'>You answered " + correct + " out of " + questions + " questions correctly! Not bad!</div>");
         }
-        window.scrollTo(0, document.body.scrollHeight); // scroll to the bottom of the page
+        document.getElementById("quiz-section").scrollIntoView(); // scroll a little bit
     }
 
 
@@ -149,7 +192,6 @@ $(function() {
             }
         })
     }
-
 
 });
 
