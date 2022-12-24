@@ -77,7 +77,7 @@ const pool_pic = document.getElementById("pool-pic");
 let pool_pic_zoomed_in = false;
 pool_pic.addEventListener("click", zoom_pool_pic);
 
-//Form validation (might delete later)
+// Form validation
 
 const form = document.getElementById("form");
 const first_name = document.getElementById("first-name");
@@ -111,7 +111,7 @@ function validate_form(event) {
     if (age.value === "" || isNaN(age.value) || age.value <= 0 || age.value > 150) {
         if (age.value === "") error_text += "Warning! Please enter an age!\n";
         else if (isNaN(age.value)) error_text += "Warning! The age should be a number!\n";
-        else if (age.value <= 0) error_text += "Warning! The age cannot be less than or equal to 0!\n";
+        else if (age.value <= 0) error_text += "Warning! The age must be greater than 0!\n";
         else error_text += "Warning! The age cannot be greater than 150!\n"
     }
 
@@ -176,7 +176,7 @@ $(function() {
         })
     }
 
-    
+
     $("#scroll-right").click(function() {
         scroll_right();
     })
