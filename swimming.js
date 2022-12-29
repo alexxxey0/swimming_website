@@ -49,15 +49,16 @@ const style_texts = ["The butterfly (colloquially shortened to fly) is a swimmin
 ];
 
 let style_descriptions = []; // array, that will contain all of the styles descriptions (initialized empty)
+const style_links = document.querySelectorAll(".style-link");
 
 // "for" loop to create all of styles descriptions as objects, and add an event listener for that object
-for (let i = 0; i < styles.length; i++) {
+for (let i = 0; i < style_links.length; i++) {
     const style_li = document.getElementById(styles[i]);
     const style_text = document.createElement("p");
     style_text.innerText = style_texts[i];
     style_descriptions[i] = new style_description(style_li, style_text);
 
-    const style_link = document.getElementById(styles[i] + "-link");
+    const style_link = style_links[i];
     style_link.addEventListener("click", function() {style_descriptions[i].show_text()});
 }
 
