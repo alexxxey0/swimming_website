@@ -178,10 +178,6 @@ a {
     text-decoration: underline;
 }
 
-#swim-styles p::after {
-    content: "(click to learn more)";
-    font-style: italic;
-}
 /* Competition pools */
 
 #pool-pic {
@@ -414,8 +410,8 @@ label {
     }
 
     /* We don't need 'click here' messages in the print version */
-    #swim-styles p::after { 
-        content: "";
+    #learn-more {
+        display: none;
     }
 
     #competition-pools::after {

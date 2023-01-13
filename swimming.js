@@ -34,7 +34,7 @@ class style_description {
     show_text() {
         if (!this.is_shown) this.li.append(this.text); // if text is not shown, show it
         else this.text.remove(); // if text is already shown, remove it
-        this.is_shown = !this.is_shown;
+        this.is_shown = !this.is_shown; 
     }
 }
 
@@ -97,24 +97,18 @@ const letters_regexp = /^[a-z]+$/i; // regular expression to check if string con
 function validate_form(event) {
     let error_text = "";
     
-    if (first_name.value === "" || !letters_regexp.test(first_name.value)) {
-        if (first_name.value === "") error_text += "Warning! Please enter a name!\n";
-        else error_text += "Warning! The name should contain only letters!\n";
-    }
+    if (first_name.value === "") error_text += "Warning! Please enter a name!\n";
+    else if (!letters_regexp.test(first_name.value)) error_text += "Warning! The name should contain only letters!\n";
 
-    if (last_name.value === "" || !letters_regexp.test(last_name.value)) {
-        if (last_name.value === "") error_text += "Warning! Please enter a last name!\n";
-        else error_text += "Warning! The last name should contain only letters!\n";
-    }
+    if (last_name.value === "") error_text += "Warning! Please enter a last name!\n";
+    else if (!letters_regexp.test(last_name.value)) error_text += "Warning! The last name should contain only letters!\n";
 
     if (email.value === "") error_text += "Warning! Please enter an email!\n";
 
-    if (age.value === "" || isNaN(age.value) || age.value <= 0 || age.value > 150) {
-        if (age.value === "") error_text += "Warning! Please enter an age!\n";
-        else if (isNaN(age.value)) error_text += "Warning! The age should be a number!\n";
-        else if (age.value <= 0) error_text += "Warning! The age must be greater than 0!\n";
-        else error_text += "Warning! The age cannot be greater than 150!\n"
-    }
+    if (age.value === "") error_text += "Warning! Please enter an age!\n";
+    else if (isNaN(age.value)) error_text += "Warning! The age should be a number!\n";
+    else if (age.value <= 0) error_text += "Warning! The age must be greater than 0!\n";
+    else if (age.value > 150) error_text += "Warning! The age cannot be greater than 150!\n"
 
     if (error_text !== "") {
         alert(error_text);
