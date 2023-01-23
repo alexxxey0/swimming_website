@@ -37,6 +37,10 @@ Contents:
     --neon-blue: #1F51FF;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -87,7 +91,6 @@ header h1 {
     font-size: 18px;
     line-height: 1.5;
 }
-
 
 a {
     cursor: pointer;
@@ -304,7 +307,6 @@ label {
     margin-right: auto;
     border: 3px solid black;
     border-radius: 50px;
-
     margin-bottom: 3%;
 }
 
@@ -388,7 +390,7 @@ label {
 /* Print version */
 
 @media print {
-    nav, header, #pool-pic-caption, #scroll-left, #scroll-right, #check-answers, #img-gallery { 
+    nav, header, #pool-pic-caption, #scroll-left, #scroll-right, #check-answers, #img-gallery, #form-section, #learn-more { 
         display: none;
     }
 
@@ -409,18 +411,8 @@ label {
         box-shadow: 0 0;
     }
 
-    /* We don't need 'click here' messages in the print version */
-    #learn-more {
-        display: none;
-    }
-
     #competition-pools::after {
         content: "";
-    }
-
-    /* We don't need the form in the print version */
-    #form-section {
-        display: none;
     }
 }
 

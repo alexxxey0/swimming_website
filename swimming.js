@@ -27,7 +27,7 @@ Prototype, MooTools, ExtJS).
 class style_description {
     constructor(li, text) {
         this.li = li; // the <li> element, to which the text will be appended
-        this.text = text; // the text itself
+        this.text = text; // the text itself (<p> element)
         this.is_shown = false; // boolean, that indicates if text is already shown or not (initially false)
     }
 
@@ -38,7 +38,6 @@ class style_description {
     }
 }
 
-const styles = ["butterfly", "backstroke", "breaststroke", "freestyle"];
 const style_texts = ["The butterfly (colloquially shortened to fly) is a swimming stroke swum on the chest, with both arms moving symmetrically, accompanied by the butterfly kick (also known as the 'dolphin kick'). While other styles like the breaststroke, front crawl, or backstroke can be swum adequately by beginners, the butterfly is a more difficult stroke that requires good technique as well as strong muscles. It is the newest swimming style swum in competition, first swum in 1933 and originating out of the breaststroke.",
 
 "Backstroke or back crawl is one of the four swimming styles used in competitive events regulated by FINA, and the only one of these styles swum on the back. This swimming style has the advantage of easy breathing, but the disadvantage of swimmers not being able to see where they are going. It also has a different start from the other three competition swimming styles. The swimming style is similar to an upside down front crawl or freestyle. Both backstroke and front crawl are long-axis strokes. In individual medley backstroke is the second style swum; in the medley relay it is the first style swum.",
@@ -49,18 +48,23 @@ const style_texts = ["The butterfly (colloquially shortened to fly) is a swimmin
 ];
 
 let style_descriptions = []; // array, that will contain all of the styles descriptions (initialized empty)
-const style_links = document.querySelectorAll(".style-link");
+const style_links = document.querySelectorAll(".style-link"); // an array of all clickable style names (<a> elements)
+const style_li_elements = document.querySelectorAll(".style-li"); // an array of all <li> elements, to which the text will be appended
 
 // "for" loop to create all of styles descriptions as objects, and add an event listener for that object
 for (let i = 0; i < style_links.length; i++) {
-    const style_li = document.getElementById(styles[i]);
+    const style_li = style_li_elements[i];
     const style_text = document.createElement("p");
     style_text.innerText = style_texts[i];
     style_descriptions[i] = new style_description(style_li, style_text);
 
     const style_link = style_links[i];
-    style_link.addEventListener("click", function() {style_descriptions[i].show_text()});
+    style_link.addEventListener("click", function() {style_descriptions[i].show_text()}); // when the link is clicked, call the method "show_text" for the style description object
 }
+
+console.log(style_links);
+console.log(style_li_elements);
+console.log(style_descriptions);
 
 // Function to zoom or unzoom pool picture (is executed when the picture is clicked)
 function zoom_pool_pic() { 
@@ -110,7 +114,7 @@ function validate_form(event) {
     else if (age.value <= 0) error_text += "Warning! The age must be greater than 0!\n";
     else if (age.value > 150) error_text += "Warning! The age cannot be greater than 150!\n"
 
-    if (error_text !== "") {
+    if (error_text !== "") { // if there are any errors, do not submit the form
         alert(error_text);
         event.preventDefault();
     }
@@ -150,7 +154,7 @@ $(function() {
 
 
     let images = [];
-    $("#img-gallery img").each(function(index, object) { // fill array with images
+    $("#img-gallery img").each(function(index, object) { // fill array with images (here, object = the image)
         images[index] = object;
     })
 
