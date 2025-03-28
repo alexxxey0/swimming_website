@@ -62,9 +62,9 @@ for (let i = 0; i < style_links.length; i++) {
     style_link.addEventListener("click", function() {style_descriptions[i].show_text()}); // when the link is clicked, call the method "show_text" for the style description object
 }
 
-console.log(style_links);
-console.log(style_li_elements);
-console.log(style_descriptions);
+// console.log(style_links);
+// console.log(style_li_elements);
+// console.log(style_descriptions);
 
 // Function to zoom or unzoom pool picture (is executed when the picture is clicked)
 function zoom_pool_pic() { 
